@@ -18,28 +18,28 @@ CLI to help start various Notarize development services
 <!-- usage -->
 ```sh-session
 $ npm install -g notarize
-$ notarize COMMAND
+$ notarize-dev COMMAND
 running command...
-$ notarize (-v|--version|version)
-notarize/0.0.0 linux-x64 node-v14.15.0
-$ notarize --help [COMMAND]
+$ notarize-dev (-v|--version|version)
+notarize/0.0.1 darwin-x64 node-v14.15.0
+$ notarize-dev --help [COMMAND]
 USAGE
-  $ notarize COMMAND
+  $ notarize-dev COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`notarize help [COMMAND]`](#notarize-help-command)
-* [`notarize setup APPLICATION`](#notarize-setup-application)
+* [`notarize-dev help [COMMAND]`](#notarize-dev-help-command)
+* [`notarize-dev setup APPLICATION`](#notarize-dev-setup-application)
 
-## `notarize help [COMMAND]`
+## `notarize-dev help [COMMAND]`
 
-display help for notarize
+display help for notarize-dev
 
 ```
 USAGE
-  $ notarize help [COMMAND]
+  $ notarize-dev help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -50,13 +50,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `notarize setup APPLICATION`
+## `notarize-dev setup APPLICATION`
 
 sets up dependencies for the specified Notarize application/project
 
 ```
 USAGE
-  $ notarize setup APPLICATION
+  $ notarize-dev setup APPLICATION
 
 ARGUMENTS
   APPLICATION  (web|api) name of application to setup
@@ -66,5 +66,5 @@ EXAMPLE
   $ notarize setup api
 ```
 
-_See code: [dist/commands/setup.ts](https://github.com/repositories/cli/blob/v0.0.0/dist/commands/setup.ts)_
+_See code: [dist/commands/setup.ts](https://github.com/kevingelion/notarize/blob/v0.0.1/dist/commands/setup.ts)_
 <!-- commandsstop -->
