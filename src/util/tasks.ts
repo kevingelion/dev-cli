@@ -3,8 +3,6 @@ import {homedir} from 'os'
 import Listr, {ListrContext, ListrTaskWrapper} from 'listr'
 import execa from 'execa'
 
-import {Application} from '../lib'
-
 const installOrUpdateHomebrewTasks = [
   {
     title: 'Checking if homebrew is already insatlled',
@@ -102,12 +100,12 @@ export const checkCleanRepoTasks = [
   },
 ]
 
-export function validateGitRepoTask(app: Application) {
+export function validateGitRepoTask(repoName: string) {
   return {
     title: 'Confirm proper project directory',
     task: () =>
       execa.command('git rev-parse --show-toplevel').then(result => {
-        if (!result.stdout.includes(`notarize-${app}`)) {
+        if (!result.stdout.includes(repoName)) {
           throw new Error(
             'Unclean working tree. Commit or stash changes first.',
           )

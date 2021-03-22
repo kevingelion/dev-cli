@@ -1,0 +1,1 @@
+{"version":"0.1.0","commands":{"web":{"id":"web","description":"Helper commands for running inside the Notarize web project","pluginName":"@lclhst/dev-cli","pluginType":"core","aliases":[],"examples":["$ notarize-dev web setup\n"],"flags":{},"args":[{"name":"subcommand","description":"subcommand","required":true,"options":["setup"]}]}}}

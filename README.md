@@ -21,7 +21,7 @@ $ npm install -g @lclhst/dev-cli
 $ notarize-dev COMMAND
 running command...
 $ notarize-dev (-v|--version|version)
-@lclhst/dev-cli/0.0.2 darwin-x64 node-v14.15.0
+@lclhst/dev-cli/0.1.0 darwin-x64 node-v14.15.0
 $ notarize-dev --help [COMMAND]
 USAGE
   $ notarize-dev COMMAND
@@ -31,7 +31,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`notarize-dev help [COMMAND]`](#notarize-dev-help-command)
-* [`notarize-dev setup APPLICATION`](#notarize-dev-setup-application)
+* [`notarize-dev web SUBCOMMAND`](#notarize-dev-web-subcommand)
 
 ## `notarize-dev help [COMMAND]`
 
@@ -50,20 +50,20 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `notarize-dev setup APPLICATION`
+## `notarize-dev web SUBCOMMAND`
 
-Sets up dependencies for the specified Notarize application/project
+Helper commands for running inside the Notarize web project
 
 ```
 USAGE
-  $ notarize-dev setup APPLICATION
+  $ notarize-dev web SUBCOMMAND
 
 ARGUMENTS
-  APPLICATION  (web) name of application to setup
+  SUBCOMMAND  (setup) subcommand
 
 EXAMPLE
-  $ notarize-dev setup web
+  $ notarize-dev web setup
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/kevingelion/dev-cli/blob/v0.0.2/src/commands/setup.ts)_
+_See code: [src/commands/web.ts](https://github.com/kevingelion/dev-cli/blob/v0.1.0/src/commands/web.ts)_
 <!-- commandsstop -->

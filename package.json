@@ -1,7 +1,7 @@
 {
   "name": "@lclhst/dev-cli",
   "description": "CLI to help setup and run various Notarize development services",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "Kevin Murphy @kevingelion",
   "bin": {
     "notarize-dev": "./bin/run"
