@@ -17,11 +17,11 @@ CLI to help start various Notarize development services
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @kevingelion/dev-cli
+$ npm install -g @lclhst/dev-cli
 $ notarize-dev COMMAND
 running command...
 $ notarize-dev (-v|--version|version)
-@kevingelion/dev-cli/0.0.1 darwin-x64 node-v14.15.0
+@lclhst/dev-cli/0.0.1 darwin-x64 node-v14.15.0
 $ notarize-dev --help [COMMAND]
 USAGE
   $ notarize-dev COMMAND
@@ -65,5 +65,5 @@ EXAMPLE
   $ notarize-dev setup web
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/kevingelion/dev-cli/blob/v0.0.1/src/commands/setup.ts)_
+_See code: [src/commands/setup.ts](https://github.com/lclhst/dev-cli/blob/v0.0.1/src/commands/setup.ts)_
 <!-- commandsstop -->
