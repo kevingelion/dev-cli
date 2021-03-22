@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
+    "outDir": "lib",
+    "rootDir": "src",
     "declaration": true,
     "importHelpers": true,
     "module": "commonjs",
@@ -9,11 +9,8 @@
     "target": "es2017",
     "esModuleInterop": true,
     "removeComments": true,
-    "paths": {
-      "@util/*": ["src/util/*"],
-      "@lib/*": ["src/lib/*"],
-      "@lib": ["src/lib/index.ts"]
-    }
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }

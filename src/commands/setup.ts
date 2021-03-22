@@ -2,15 +2,14 @@ import {Command} from '@oclif/command'
 import Listr from 'listr'
 import execa from 'execa'
 
-import {Application} from '@lib'
-import {installNodeTasks, installYarnTasks, validateGitRepoTask} from '@util/tasks'
+import {Application} from '../lib'
+import {installNodeTasks, installYarnTasks, checkCleanRepoTasks, validateGitRepoTask} from '../util/tasks'
 
 export default class Setup extends Command {
-  static description = 'sets up dependencies for the specified Notarize application/project'
+  static description = 'Sets up dependencies for the specified Notarize application/project'
 
   static examples = [
-    `$ notarize setup web
-$ notarize setup api
+    `$ notarize-dev setup web
 `,
   ]
 
@@ -18,7 +17,7 @@ $ notarize setup api
     name: 'application',
     required: true,
     description: 'name of application to setup',
-    options: Object.values(Application),
+    options: [Application.Web],
   }]
 
   async run() {
@@ -27,6 +26,10 @@ $ notarize setup api
     // Separate these based on application type
     const tasks = new Listr([
       ...[validateGitRepoTask(args.application as Application)],
+      {
+        title: 'Confirm latest git status',
+        task: () => new Listr(checkCleanRepoTasks, {concurrent: true}),
+      },
       ...installNodeTasks,
       ...installYarnTasks,
       {
