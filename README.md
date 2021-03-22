@@ -13,7 +13,6 @@ CLI to help start various Notarize development services
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
-* [Command Topics](#command-topics)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -31,9 +30,40 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-# Command Topics
+* [`notarize-dev help [COMMAND]`](#notarize-dev-help-command)
+* [`notarize-dev setup APPLICATION`](#notarize-dev-setup-application)
 
-* [`notarize-dev help`](docs/help.md) - display help for notarize-dev
-* [`notarize-dev setup`](docs/setup.md) - Sets up dependencies for the specified Notarize application/project
+## `notarize-dev help [COMMAND]`
 
+display help for notarize-dev
+
+```
+USAGE
+  $ notarize-dev help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `notarize-dev setup APPLICATION`
+
+Sets up dependencies for the specified Notarize application/project
+
+```
+USAGE
+  $ notarize-dev setup APPLICATION
+
+ARGUMENTS
+  APPLICATION  (web) name of application to setup
+
+EXAMPLE
+  $ notarize-dev setup web
+```
+
+_See code: [src/commands/setup.ts](https://github.com/notarize/dev-cli/blob/v0.0.1/src/commands/setup.ts)_
 <!-- commandsstop -->
