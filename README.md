@@ -1,4 +1,4 @@
-notarize
+dev-cli
 ========
 
 CLI to help start various Notarize development services
