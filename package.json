@@ -1,12 +1,12 @@
 {
   "name": "notarize",
-  "description": "CLI to help start various Notarize development services",
-  "version": "0.0.0",
+  "description": "CLI to help setup and run various Notarize development services",
+  "version": "0.0.1",
   "author": "Kevin Murphy",
   "bin": {
-    "notarize": "./bin/run"
+    "notarize-dev": "./bin/run"
   },
-  "bugs": "https://github.com/repositories/cli/issues",
+  "bugs": "https://github.com/kevingelion/notarize/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -37,7 +37,7 @@
     "/dist",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/repositories/cli",
+  "homepage": "https://github.com/kevingelion/notarize",
   "keywords": [
     "oclif"
   ],
@@ -45,12 +45,12 @@
   "main": "dist/index.js",
   "oclif": {
     "commands": "./dist/commands",
-    "bin": "notarize",
+    "bin": "notarize-dev",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "repositories/cli",
+  "repository": "kevingelion/notarize",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
